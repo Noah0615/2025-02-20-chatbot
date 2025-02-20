@@ -45,7 +45,7 @@ if prompt := st.chat_input("What is up?"):
     if "api_key" in st.session_state:
         with st.chat_message("assistant"):
             stream = client.chat.completions.create(
-                model="gpt-3.5-turbo",
+                model="dall-e-3",
                 messages=[
                     {"role": m["role"], "content": m["content"]}
                     for m in st.session_state.messages
